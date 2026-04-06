@@ -8,7 +8,23 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8928585b88b2b513",
+            "id": "b3b9b846cdbdeb8c",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      },
+      {
+        "id": "985047315b842a61",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2802ede6631f62c5",
             "type": "leaf",
             "state": {
               "type": "vscode-editor",
@@ -20,19 +36,18 @@
             }
           },
           {
-            "id": "b3b9b846cdbdeb8c",
+            "id": "423703d8eb6171b4",
             "type": "leaf",
             "state": {
               "type": "vscode-editor",
               "state": {
-                "file": "working-model/skyPage_example1.php"
+                "file": "working-model/css/skyStyles.css"
               },
               "icon": "lucide-file",
-              "title": "skyPage_example1"
+              "title": "skyStyles"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -105,7 +120,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "working-model/skyPage_example1.php",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +129,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for skyPage_example1"
+              "title": "Backlinks"
             }
           },
           {
@@ -124,12 +138,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "working-model/skyPage_example1.php",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from skyPage_example1"
+              "title": "Outgoing links"
             }
           },
           {
@@ -167,21 +180,30 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "working-model/skyPage_example1.php",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of skyPage_example1"
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "daa98de12c69b38d",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -193,16 +215,21 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "code-files:Create Code File": false,
-      "vscode-editor:Create Code File": false
+      "vscode-editor:Create Code File": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "b3b9b846cdbdeb8c",
   "lastOpenFiles": [
-    "README.md",
-    "working-model/skyLite_core.php",
     "working-model/skyPage_example1.php",
-    "working-model/callSky.php.ts",
+    "working-model/skyLite_core.php",
+    "working-model/images/check-it-out.gif",
+    "working-model/images",
+    "working-model/css",
+    "working-model/css/skyStyles.css",
     "working-model",
+    "README.md",
+    "working-model/callSky.php.ts",
     "docs"
   ]
 }

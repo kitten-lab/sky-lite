@@ -10,6 +10,9 @@ function skylite($result) {
     };
 }
 
+function getEnvironment(){
+
+}
 
 function nameSelf($text) { 
     $GLOBALS['mod'] = $text;
@@ -65,38 +68,25 @@ function closeSky() {
     };
 }
 
-function getImg($img, $alt = '',$class = '') {
-    $path = "/" . $GLOBALS['sys'] . '/' . $GLOBALS['dom'] . "/" . $img;
-    $result = $GLOBALS['sonar'] . "/i/" . $path;
-    if (is_file($result)) {
+function getImg($folder, $img, $type, $class='', $alt='') {
+    $path = $folder . '/' . $img . "." . $type;
+    //$result = $GLOBALS['sonar'] . "/i/" . $path;
+    if (is_file($path)) {
         $hasClass = $class ? " class='$class'" : "";
         $hasAlt = $alt ? " alt='$alt'" : "";
         
-        skylite("<img $hasClass src='" . i_root . "$path' $hasAlt>"); 
+        skylite("<img src='" . $path . "'  $hasClass$hasAlt>"); 
 
         } else {
             error_log("KDE! IMAGE file not found. " . $result);         
         }
 }
 
-function img($img, $folder, $prefix, $alt = '',$class = '') {
-    $path = "/" . $folder . "/" . $prefix . "_" . $img;
-    $result = $GLOBALS['sonar'] . "/i/" . $path;
-    if (is_file($result)) {
-        $hasClass = $class ? " class='$class'" : "";
-        $hasAlt = $alt ? " alt='$alt'" : "";
-
-         echo "<img $hasClass src='" . i_root . "$path' $hasAlt>"; 
-         } else {
-            error_log("KDE! IMAGE file not found. " . $result);         
-         }
-}
-
-function getA_Style($css, $folder, $function) {
-    $path = "/" . $folder . "/" . $function . "/" . $css . ".css";
-    $full = $GLOBALS['sonar'] . "a" . $path;
-    if (is_file($full)) {
-         echo '<link rel="stylesheet" type="text/css" href="' . a_root . $path . '">';
+function getA_Style($css, $folder) {
+    $path = __DIR__ . '/' . $folder . "/" . $css . ".css";
+    // $full = $GLOBALS['sonar'] . "a" . $path;
+    if (is_file($path)) {
+         echo '<link rel="stylesheet" type="text/css" href="' . $path . '">';
          } else {
             echo "<div class='loadFail'>PATH NOT FOUND</div>";
             echo "$path";
@@ -104,6 +94,7 @@ function getA_Style($css, $folder, $function) {
          }
 }
 
+//=alef-bet specific=================================================
 function loadTool($tool, $type, $function) {
 
     $result = $GLOBALS['sonar'] . $GLOBALS['ktool'] . $tool . '/' . $type . $function . '.php';
